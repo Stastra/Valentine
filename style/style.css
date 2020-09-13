@@ -1,0 +1,163 @@
+/*HOME*/
+
+.link {
+	 position: relative;
+	margin: 0 20px;
+	color: #45C0D4;
+	font: 700 2vw "Open Sans", sans-serif;
+	line-height: 40px;
+}
+
+.link:before {
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: transform .5s ease;
+  background: #F15A5C;
+  transform: scaleX(0);
+}
+
+.link:hover:before {
+	 transform: scaleX(1);
+}
+
+.link:hover {
+	color: #45C0D4;
+	text-decoration: none;
+}
+
+li>a.active {
+	border-bottom-color: #F15A5C;
+}
+
+.home {
+	 background: #0b5268 url("../images/bg-img1.jpg") center no-repeat;
+  background-size: cover;	
+}
+
+.bigname {
+	font: 700 18vw "Josefin Sans", sans-serif;
+	background: -webkit-gradient(linear, left top, left bottom, from(#abe7f6), color-stop(#45c0d4), to(#0f88a4));
+  background: linear-gradient(to bottom, #abe7f6, #45c0d4, #0f88a4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #abe7f6;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 6s;
+}
+
+/*ABOUT*/
+
+.about, #because, #card {
+	background-color: #0b5268;
+}
+
+h2.bigname {
+	font-size: 10vw;
+	padding: 140px 0 40px 0;
+}
+
+.about-text {
+	font: 700 18px "Open Sans", sans-serif;
+	margin: 40px 60px;
+}
+
+.img-float {
+	width: 35vw;
+	margin-right: 40px;
+}
+
+/*verse*/
+
+.left, .look-right, #look {
+	background-color: #96CDEF;
+}
+
+/*card*/
+
+#card {
+	overflow: hidden;
+}
+
+/*rose*/
+
+#rose {
+	 background: #0b5268 url("../images/rose-on-water.jpg") center no-repeat fixed;
+  background-size: cover;	
+}
+
+/*look*/
+
+.look-title {
+	font: 700 3vw "Old Standard TT", serif;
+	padding: 50px 50px 40px 50px;
+	line-height: 80px;
+}
+
+.bg-title {
+ 	background-color: #047DA4;
+ }
+
+ /*because*/
+
+ .red {
+ 	-webkit-text-stroke: 3px #F15A5C;
+ }
+
+ /*media*/
+
+ @media only screen and (min-width: 1900px) {
+ 	#card {
+ 		overflow: visible;
+ 		text-align: center;
+ 	}
+ 	.img-fluid {
+ 		height: 100%;
+ 	}
+ }
+
+ @media only screen and (max-width: 768px) {
+ 	.link {
+ 		font-size: 28px;
+ 	}
+ 	.about h2.bigname {
+ 		padding: 40px 0 40px 0;
+ 	}
+ 	.img-float {
+ 		margin-left: 60px;
+ 	}
+ 	#rose {
+ 		height: 50%;
+ 	}
+ 	.bg-title {
+ 		width: 60%;
+ 		margin: 40px 0;
+ 	}
+ 	.look-title {
+ 		font-size: 24px; 
+ 		padding: 40px 40px 30px 40px;
+	line-height: 60px;
+ 	}
+ 	.because h2.bigname {
+ 		margin-top: auto;
+ 		margin-bottom: 40px;
+ 	}
+}
